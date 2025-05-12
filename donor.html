@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donor Registration</title>
+  <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+  <h2>Donor Registration</h2>
+
+  <form id="donorForm">
+    <input type="text" id="donorName" placeholder="Full Name" required />
+    <input type="number" id="donorAge" placeholder="Age" required />
+    <input type="text" id="donorBloodGroup" placeholder="Blood Group (e.g., A+)" required />
+    <input type="tel" id="donorPhone" placeholder="Phone Number" required />
+    <!-- ✅ Availability Checkbox -->
+    <label style="display: block; margin: 10px auto; max-width: 300px; text-align: left;">
+      <input type="checkbox" id="donorAvailable" />
+      Available to donate
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="donorMessage" class="confirmation-message"></div>
+
+  <p><a href="donors.html">View Donor List</a></p>
+  <a href="request.html">Request Blood</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

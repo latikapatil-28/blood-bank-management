@@ -1,0 +1,76 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f8d7da,
+  #fff);
+  color: #333;
+  }
+  
+
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #b30000;
+  color: white;
+  }
+  
+
+  nav a {
+    margin: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #b30000;
+    }
+
+main, form {
+  padding: 20px;
+  text-align: center;
+}
+
+input, button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #b30000;;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.confirmation-message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.donor-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

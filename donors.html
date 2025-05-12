@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donor List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .donor-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h2>Available Donors</h2>
+  <div id="donorList"></div>
+
+  <script>
+    const donorListContainer = document.getElementById("donorList");
+    const donors = JSON.parse(localStorage.getItem("donors")) || [];
+
+    if (donors.length === 0) {
+      donorListContainer.innerHTML = "<p>No donors available.</p>";
+    } else {
+      const availableDonors = donors.filter(d => d.available);
+      if (availableDonors.length === 0) {
+        donorListContainer.innerHTML = "<p>No donors marked as available.</p>";
+      } else {
+        donorListContainer.innerHTML = availableDonors.map(d => `
+          <div class="donor-card">
+            <p><strong>Name:</strong> ${d.name}</p>
+            <p><strong>Age:</strong> ${d.age}</p>
+            <p><strong>Blood Group:</strong> ${d.bloodGroup}</p>
+            <p><strong>Phone:</strong> ${d.phone}</p>
+          </div>
+        `).join("");
+      }
+    }
+  </script>
+</body>
+</html>
